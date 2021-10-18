@@ -18,49 +18,83 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Add Employee</h4>
+                        <h4 class="card-title add-title">Add Employee</h4>
+                        <h4 class="card-title update-title" style="display: none;">Update Employee</h4>
                     </div>
+
                     <div class="card-body">
                         <!-- <form action=""> -->
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <h6>Employee Firstname</h6>
-                                        <input autofocus name="fname" id="fname" type="text" class="form-control form-control-sm" placeholder="Employee Firstname">
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <h6>Employee Firstname</h6>
+                                    <input autofocus name="fname" required id="fname" type="text" class="form-control form-control-sm" placeholder="Employee Firstname">
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <h6>Employee Lastname</h6>
-                                        <input type="text" name="lname" id="lname" class="form-control form-control-sm" placeholder="Employee Lastname">
-                                    </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <h6>Employee Lastname</h6>
+                                    <input type="text" required name="lname" id="lname" class="form-control form-control-sm" placeholder="Employee Lastname">
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <h6>Employee Mobile</h6>
-                                        <input type="number" name="mob" id="mob" class="form-control form-control-sm" placeholder="Employee Mobile">
-                                    </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <h6>Employee Mobile</h6>
+                                    <input type="number" required name="mob" id="mob" class="form-control form-control-sm" placeholder="Employee Mobile">
                                 </div>
+                            </div>
 
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <h6>Employee Email</h6>
-                                        <input type="email" name="email" id="email" class="form-control form-control-sm" placeholder="Employee Email">
-                                    </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <h6>Employee Email</h6>
+                                    <input type="email" required name="email" id="email" class="form-control form-control-sm" placeholder="Employee Email">
                                 </div>
+                            </div>
+                            <input type="hidden" id="emp_id">
 
-                                <div class="col-md-3 mt-2">
-                                    <button class="btn btn-success btn-sm" id="AddEmployee">Submit</button>
-                                </div>
+                            <div class="col-md-3 mt-2">
+                                <button class="btn btn-success btn-sm" id="AddEmployee">Submit</button>
+                                <button class="btn btn-info btn-sm" style="display: none;" id="UpdateEmployee">Update</button>
 
                             </div>
+
+                        </div>
                         <!-- </form> -->
 
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Firstname</th>
+                                        <th>Lastname</th>
+                                        <th>Mobileno</th>
+                                        <th>Email</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="data">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+
 
 
 
